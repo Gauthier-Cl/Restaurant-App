@@ -1,0 +1,23 @@
+body{
+background-color: #dbae09;
+
+}
+.favorite_Page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+ 
+ 
+}
+.favorite_Page .cards{
+     height:auto;
+    
+}
+
+.container_Fav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   margin-left: 3rem;
+}

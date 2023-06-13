@@ -15,12 +15,12 @@ const favoriteRestaurants = restaurants.filter((restaurant) =>
 );
 
   return (
-    <div className="all">
-      <div className="container">
-        <div id="container">
+    <div className="favorite_Page">
+      
+        <div id="container" >
           <div className="cards">
             {favoriteRestaurants.map((restaurant: Restaurant) => (
-              <Card
+              <Card 
                 key={restaurant.id}
                 restaurant={restaurant}
                 isFavorite={true}
@@ -29,7 +29,7 @@ const favoriteRestaurants = restaurants.filter((restaurant) =>
           </div>
         </div>
       </div>
-    </div>
+    
   );
 };
 

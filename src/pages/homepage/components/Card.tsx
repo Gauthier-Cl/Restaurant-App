@@ -20,6 +20,7 @@ export const Card = ({
     <div className="all">
       <li className="cards_item" key={id}>
         <div className="card">
+          
           <div className="card_image">
             <img src={img} alt={name} />
           </div>
