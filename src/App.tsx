@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import { Route, Routes } from "react-router-dom";
 import { RestaurantProvider } from "./context/RestaurantContext";
 import { HomePage } from "./pages/homepage/Homepage";

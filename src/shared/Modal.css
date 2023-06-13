@@ -15,7 +15,8 @@
   text-align: center;
   text-decoration: none #000000 solid;
   width: 25rem;
-  max-width: 460px;
+  height: 15rem;
+  max-width: 90%;
   bottom: 50%;
   left: 50%;
   transform: translate(-50%, 50%);
@@ -23,7 +24,7 @@
   padding: 20px;
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  height: 25%;
+  
 }
 
 .modal-wrapper .modal-wrapper_content {
@@ -52,17 +53,19 @@
   color: #000000;
   display: flex;
   font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1rem;
+ 
   font-weight: 700;
   justify-content: center;
   line-height: 1.75rem;
-  padding: .75rem 1.65rem;
+ padding: .75rem 3rem;
+    font-size: 1.5rem;
   position: fixed;
   text-align: center;
   text-decoration: none #000000 solid;
   text-decoration-thickness: auto;
- top: 70%;
-  left: 1%;
+   top: 70%;
+  left: 48%;
+ 
   transform: translate(-50%, -50%);
   max-width: 460px;
   cursor: pointer;
@@ -91,12 +94,7 @@
   left: 2px;
 }
 
-@media (min-width: 768px) {
-  .addFavModal {
-    padding: .75rem 3rem;
-    font-size: 1.25rem;
-  }
-}
+
 
 .delModal {
   background-color: #3DD1E7;
@@ -105,17 +103,19 @@
   color: #000000;
   display: flex;
   font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1rem;
+  
   font-weight: 700;
   justify-content: center;
   line-height: 1.75rem;
-  padding: .75rem 1.65rem;
+  
+   padding: .75rem 3rem;
+    font-size: 1.5rem;
   position: fixed;
   text-align: center;
   text-decoration: none #000000 solid;
   text-decoration-thickness: auto;
-  top: 70%;
-  left: 48%;
+ top: 70%;
+  left: 1%;
   transform: translate(-50%, -50%);
   max-width: 460px;
   cursor: pointer;
@@ -144,9 +144,38 @@
   left: 2px;
 }
 
-@media (min-width: 768px) {
+
+   
+
+@media (min-width: 268px) and (max-width: 767px) {
   .delModal {
-    padding: .75rem 3rem;
+    padding: .75rem 1rem;
+    font-size: 0.95rem;
+    
+  }
+  .addFavModal {
+    padding: .75rem 1rem;
+    font-size: 0.95rem;
+  }
+   .modal-wrapper{
+    width: 70%;
+    height: 30%;
+   }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .modal-wrapper {
+    width: 40%;
+    height: 30%;
+  }
+  .delModal {
+    padding: .75rem 2rem;
+    font-size: 1.25rem;
+    
+  }
+  .addFavModal {
+    padding: .75rem 2rem;
     font-size: 1.25rem;
   }
 }
+  
+

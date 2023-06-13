@@ -34,7 +34,7 @@ export const Details = () => {
 
   return (
     <>
-      <div className="all">
+      <div className="allDetails">
         <div className="card">
           <div className="card_image">
             <img src={img} alt={name} />

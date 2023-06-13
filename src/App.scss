@@ -3,16 +3,18 @@
 
 header {
   background-color: #dbae09;
-  padding: 20px;
+ 
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+ 
   width: 98vw;
+  
 }
 body {
-  margin-top: 0;
+
+  margin: 0;
 }
 .chef{
     width:5rem;
@@ -21,16 +23,16 @@ body {
 h1{
  
     font-family: 'Oleo Script', cursive;
-    margin-right:85rem;
+   padding-right: 85rem;
 }
 .header-links a {
    font-family: 'Oleo Script', cursive;
-  margin-left: 10px;
+  
   color: #fff;
   text-decoration: none;
   font-size: 30px;
   font-weight: bold;
-  padding: 12px 18px;
+ padding-right: 15px;
   background-color: #dbae09;
   border-radius: 4px;
   transition: background-color 0.3s ease;
@@ -67,19 +69,32 @@ h1{
   border-radius: 0.25rem;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+ 
   padding-left: 30px;
-  background: repeating-linear-gradient(
-      #0000 0 calc(1.2rem - 1px),
-      #66afe1 0 1.2rem
-    )
-    right bottom / 100% 100%, linear-gradient(red 0 0) 30px 0 / 2px 100% #fff;
-  background-repeat: no-repeat;
-  line-height: 1.2rem;
-  -webkit-mask: radial-gradient(circle .8rem at 2px 50%, #0000 98%, #000) 0 0 /
-    100% 2.4rem;
+  background: repeating-linear-gradient(#0000 0 calc(1.2rem - 1px),
+        #f1f1f1 0 1.2rem) right bottom / 100% 100%, linear-gradient(rgba(207, 15, 1, 0.664) 0 0) 30px 0 / 2px 100% #fff;
+    background-repeat: no-repeat;
+    line-height: 1.2rem;
+   
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    height: 6px;
+    width:99%;
+  }
+  
+  &:before {
+    top: -5px;
+    background: radial-gradient(circle, transparent, transparent 50%, #FBFBFB 50%, #FBFBFB 100% ) -7px -8px / 16px 16px repeat-x,
+  }
+  
+  &:after {
+    bottom: -5px;
+    background: radial-gradient(circle, transparent, transparent 50%, #FBFBFB 50%, #FBFBFB 100% ) -7px -2px / 16px 16px repeat-x,
+  }
 }
-
 .card_image {
   height: calc(13 * 1.2rem);
   padding: 1.2rem 1.2rem 0;
