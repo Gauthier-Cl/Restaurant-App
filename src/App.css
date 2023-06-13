@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Seaweed+Script&display=swap');
+
+
+header {
+  background-color: #dbae09;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 98vw;
+}
+body {
+  margin-top: 0;
+}
+.chef{
+    width:5rem;
+    
+}
+h1{
+ 
+    font-family: 'Oleo Script', cursive;
+    margin-right:85rem;
+}
+.header-links a {
+   font-family: 'Oleo Script', cursive;
+  margin-left: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 12px 18px;
+  background-color: #dbae09;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+
+
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+  background-color: #dbae09;
+   font-family: 'Oleo Script', cursive;
+   
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
+  width: 70rem;
+  height: 35rem;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-left: 30px;
+  background: repeating-linear-gradient(
+      #0000 0 calc(1.2rem - 1px),
+      #66afe1 0 1.2rem
+    )
+    right bottom / 100% 100%, linear-gradient(red 0 0) 30px 0 / 2px 100% #fff;
+  background-repeat: no-repeat;
+  line-height: 1.2rem;
+  -webkit-mask: radial-gradient(circle .8rem at 2px 50%, #0000 98%, #000) 0 0 /
+    100% 2.4rem;
+}
+
+.card_image {
+  height: calc(13 * 1.2rem);
+  padding: 1.2rem 1.2rem 0;
+  
+   overflow: hidden;
+}
+
+
+
+.card_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.card_content {
+  flex-grow: 1;
+  padding: 1rem;
+  margin-top: 0.6rem;
+  line-height: 2rem;
+}
+
+.card_title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.card_text {
+  margin-bottom: 0.5rem;
+}
+p{
+  margin-top: 0.2rem;
+  font-size: 1rem;
+  margin-bottom: 1.7rem;
+}
+.card-hover__link {
+  color: #66afe1;
+  
+  
+}
+
+.card_hover__link:hover {
+  text-decoration: underline;
+  
+}
+
+
+ul{
+  list-style-type: none;
+}
+@media (max-width: 768px) {
+  h1 {
+    margin-right: 0;
+  }
+
+  .cards_item {
+    width: 100%;
+   height: 35rem;
+  }
+}

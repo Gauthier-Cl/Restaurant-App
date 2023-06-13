@@ -3,36 +3,24 @@ import React, { createContext, useEffect, useState } from "react";
 interface FavoritesContextType {
   favoritesIds: number[];
   addToFavorites: (restaurantId: number) => void;
-  deleteFromFavorites: (restaurantId: number) => void;
+  deleteFromFavorites: () => void;
+  showModal: boolean;
+  setShowModal: (show: boolean) => void;
+  setRestaurantIdToDelete: (restaurantId: number | null) => void;
 }
 
 const FavoritesContext = createContext({} as FavoritesContextType);
 
-
-//  const handleAddToFavorites = () => {
-//    const favoriteRestaurantsJson = localStorage.getItem("favorites");
-//    const isDetailsPage = location.pathname.startsWith("/details");
-//    const favoriteRestaurants = favoriteRestaurantsJson
-//      ? JSON.parse(favoriteRestaurantsJson)
-//      : [];
-//    const isAlreadyFavorite = favoriteRestaurants.some(
-//      (favorite: { id: number }) => favorite.id === restaurant.id
-//    );
-
-//    if (isAlreadyFavorite) {
-//      window.alert("Restaurant already exists in favorites");
-//    } else {
-//      favoriteRestaurants.push(restaurant.id);
-//      localStorage.setItem("favorites", JSON.stringify(favoriteRestaurants));
-//    }
-//  };
-
 const FavoritesProvider = ({ children }: { children: React.ReactNode }) => {
   const [favoritesIds, setFavoritesIds] = useState<number[]>([]);
+  const [showModal, setShowModal] = useState(false);
+  const [restaurantIdToDelete, setRestaurantIdToDelete] = useState<
+    number | null
+  >(null);
 
   const getFavoriteIds = () => {
     const favorites = localStorage.getItem("favorites");
-    const parsedFavorites = JSON.parse(favorites ? favorites : "");
+    const parsedFavorites = favorites ? JSON.parse(favorites) : [];
     setFavoritesIds(parsedFavorites);
   };
 
@@ -41,17 +29,31 @@ const FavoritesProvider = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   const addToFavorites = (restaurantId: number) => {
-    // Ajouter l'id au local storage
-    // Mettre à jour la variable d'état
+    const updatedFavorites = [...favoritesIds, restaurantId];
+    setFavoritesIds(updatedFavorites);
+
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
   };
-  const deleteFromFavorites = (restaurantId: number) => {
-    // Supprimer du local storage
-    // Mettre à jour la variable d'état
+  const deleteFromFavorites = () => {
+    const updatedFavorites = favoritesIds.filter(
+      (id) => id !== restaurantIdToDelete
+    );
+    setFavoritesIds(updatedFavorites);
+
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+    setShowModal(false);
   };
 
   return (
     <FavoritesContext.Provider
-      value={{ favoritesIds, addToFavorites, deleteFromFavorites }}
+      value={{
+        favoritesIds,
+        addToFavorites,
+        deleteFromFavorites,
+        showModal,
+        setShowModal,
+        setRestaurantIdToDelete,
+      }}
     >
       {children}
     </FavoritesContext.Provider>
