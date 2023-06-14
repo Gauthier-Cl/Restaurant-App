@@ -19,6 +19,7 @@ const favoriteRestaurants = restaurants.filter((restaurant) =>
       
         <div id="container" >
           <div className="cards">
+            {/* You could have used CardsList here */}
             {favoriteRestaurants.map((restaurant: Restaurant) => (
               <Card 
                 key={restaurant.id}

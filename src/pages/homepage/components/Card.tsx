@@ -28,6 +28,7 @@ export const Card = ({
             <h2 className="card_title">{name}</h2>
             <div className="card_text">
               <p>{description_short}</p>
+              {/* careful here it is not a <p> */}
               <p>
                 <Link to={`/details/${id}`} className="card-hover__link">
                   View Details
