@@ -32,6 +32,7 @@ export const Details = () => {
   const id = restaurant.id;
   const isFavorite = favoritesIds.includes(restaurant.id);
 
+  // N'hésite pas à bien utiliser les balises sémantiques (section, main, article etc.)
   return (
     <>
       <div className="allDetails">
