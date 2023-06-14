@@ -10,7 +10,7 @@ export const Header = () => {
       <div>
         <img className="chef" src="src\images\Cartoon-Funny-chef-for-culinary-business-and-restaurant-on-transparent-background-PNG.png" />
       </div>
-      {isFavoritePage ? <h1>Favorites</h1> : <h1>L'Addition</h1>}
+      {isFavoritePage ? <h1 className="favoritesh1">Favorites</h1> : <h1 className="titleApp">L'Addition</h1>}
 
       <div className="header-links">
         {isFavoritePage ? (
