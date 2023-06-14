@@ -12,6 +12,9 @@ header {
   width: 98vw;
   
 }
+.titleApp{
+float:left;
+}
 body {
 
   margin: 0;
@@ -23,7 +26,8 @@ body {
 h1{
  
     font-family: 'Oleo Script', cursive;
-   padding-right: 85rem;
+  display: inline-block;
+ text-align: right;
 }
 .header-links a {
    font-family: 'Oleo Script', cursive;
