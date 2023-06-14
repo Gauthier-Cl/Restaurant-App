@@ -7,6 +7,7 @@ import { FavoritesContext } from "../context/FavoritesContext";
 const Modal = () => {
   const { showModal, setShowModal, deleteFromFavorites } =
     useContext(FavoritesContext);
+  // Remove console logs before delivering a code ;)
   console.log(showModal);
   if (!showModal) {
     return null;
