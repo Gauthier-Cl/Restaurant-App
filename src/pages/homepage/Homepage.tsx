@@ -6,7 +6,7 @@ import { CardsList } from "./components/CardsList";
 export const HomePage = () => {
   return (
     <div className="all">
-      
+      {/* Weird to have two container divs ? */}
       <div className="container">
         
         <div id="container">
